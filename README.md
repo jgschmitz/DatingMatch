@@ -1,4 +1,4 @@
-🧪 DateFinder Matchmaking Demo (MongoDB + OpenAI Vector Search)
+DateFinder Matchmaking Demo (MongoDB + OpenAI Vector Search)
 This Jupyter notebook walks you through a simple dating match scenario using:
 
 MongoDB Atlas Vector Search
