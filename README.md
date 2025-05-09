@@ -41,6 +41,7 @@ def get_embedding(text):
 for doc in collection.find({"profileEmbedding": {"$exists": False}}):
     embedding = get_embedding(doc["bio"])
     collection.update_one({"_id": doc["_id"]}, {"$set": {"profileEmbedding": embedding}})
+```
 
 5. 🔍 Find Matches Using Atlas Vector Search
 
