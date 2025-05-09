@@ -43,6 +43,7 @@ for doc in collection.find({"profileEmbedding": {"$exists": False}}):
     collection.update_one({"_id": doc["_id"]}, {"$set": {"profileEmbedding": embedding}})
 
 5. 🔍 Find Matches Using Atlas Vector Search
+
 ```
 query_user = collection.find_one({"user_id": "u001"})
 query_embedding = query_user["profileEmbedding"]
@@ -73,7 +74,6 @@ pipeline = [
         }
     }
 ]
-
 matches = list(collection.aggregate(pipeline))
 for match in matches:
     print(f"- {match['name']} ({match['gender']}), {match['location']}")
