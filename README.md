@@ -1,4 +1,4 @@
-DateFinder Matchmaking Demo (MongoDB + OpenAI Vector Search)
+###DateFinder Matchmaking Demo (MongoDB + OpenAI Vector Search)
 This Jupyter notebook walks you through a simple dating match scenario using:
 
 MongoDB Atlas Vector Search
@@ -79,7 +79,8 @@ for match in matches:
     print(f"- {match['name']} ({match['gender']}), {match['location']}")
     print(f"  📖 {match['bio']}")
     print(f"  🔢 Score: {round(match['score'], 3)}\n")
-    ```
+```
+    
     
 ✅ Done!
 You’ve now run vector search matchmaking in MongoDB! 🎉
