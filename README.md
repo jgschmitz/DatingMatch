@@ -1,10 +1,8 @@
 ## 💖 DateFinder Matchmaking Demo (MongoDB + OpenAI Vector Search)
-This Jupyter notebook walks you through a simple dating match scenario using:
+This example walks you through a simple dating match scenario using:
 
 MongoDB Atlas Vector Search
-
 OpenAI Embeddings
-
 Python
 
 1. ✅ Prerequisites
@@ -13,7 +11,7 @@ OpenAI API Key
 Load Singles.js into Atlas
 Create Vector Index (Index is included)
 
-3. Install libraries:
+2. 🔧 Install libraries:
 ```
 pip install pymongo openai
 ```
@@ -28,7 +26,7 @@ COLLECTION_NAME = "Singles"
 mongo_client = pymongo.MongoClient(MONGODB_URI)
 collection = mongo_client[DB_NAME][COLLECTION_NAME]
 ```
-3. 🤖 Generate Embeddings with OpenAI
+4. 🤖 Generate Embeddings with OpenAI
 ```
 import openai
 
@@ -38,14 +36,14 @@ def get_embedding(text):
     response = openai.Embedding.create(input=text, model="text-embedding-3-small")
     return response['data'][0]['embedding']
 ```
-4. 🧠 Embed All Profiles
+5. 🧠 Embed All Profiles
 ```
 for doc in collection.find({"profileEmbedding": {"$exists": False}}):
     embedding = get_embedding(doc["bio"])
     collection.update_one({"_id": doc["_id"]}, {"$set": {"profileEmbedding": embedding}})
 ```
 
-5. 🔍 Find Matches Using Atlas Vector Search
+6. 🔍 Find Matches Using Atlas Vector Search
 
 ```
 query_user = collection.find_one({"user_id": "u001"})
