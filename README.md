@@ -10,8 +10,10 @@ Python
 1. ✅ Prerequisites
 MongoDB Atlas cluster (Vector Search enabled)
 OpenAI API Key
+Load Singles.js into Atlas
+Create Vector Index (Index is included)
 
-2. Install libraries:
+3. Install libraries:
 ```
 pip install pymongo openai
 ```
