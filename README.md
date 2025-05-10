@@ -13,7 +13,7 @@ Create Vector Index (Index is included)
 
 2. 🔧 Install libraries:
 ```
-pip install pymongo openai
+pip install requirements.txt 
 ```
 3. 🔗 Connect to MongoDB
 ```
