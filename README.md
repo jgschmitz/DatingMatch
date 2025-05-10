@@ -81,6 +81,24 @@ for match in matches:
     print(f"  📖 {match['bio']}")
     print(f"  🔢 Score: {round(match['score'], 3)}\n")
 ```
+Results should render like this!
+
+### 🔍 Finding Matches for `u001`...
+
+💘 **Top Matches for Alex (male):**
+
+- **Alice** *(female)* — *New York*  
+  📖 Marketing exec who loves yoga and indie films.  
+  🔢 **Score:** `0.926`
+
+- **Samantha** *(female)* — *Chicago*  
+  📖 Cardio nurse who hikes on weekends and loves dogs.  
+  🔢 **Score:** `0.913`
+
+- **Emma** *(female)* — *Seattle*  
+  📖 Data scientist who enjoys board games and live jazz.  
+  🔢 **Score:** `0.902`
+
     
     
 ✅ Done!
