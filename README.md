@@ -2,8 +2,6 @@
 This example walks you through a simple dating match scenario using:
 
 MongoDB Atlas Vector Search
-OpenAI Embeddings
-Python
 
 1. ✅ Prerequisites
 MongoDB Atlas cluster (Vector Search enabled)
