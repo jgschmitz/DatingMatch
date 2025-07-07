@@ -11,7 +11,7 @@ Create Vector Index (Index is included)
 
 2. 🔧 Install libraries:
 ```
-pip install requirements.txt 
+pip3 install requirements.txt 
 ```
 3. 🔗 Connect to MongoDB
 ```
