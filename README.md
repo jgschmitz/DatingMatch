@@ -87,7 +87,7 @@ reranked_matches = reranker.rerank_matches(
 ## 🛠 Installation & Setup
 
 ### Prerequisites
-- Python 3.8+
+- Python 3.10+ (required for OpenAI SDK v1.x+)
 - MongoDB Atlas (optional for full functionality)
 - OpenAI API Key
 - VoyageAI API Key

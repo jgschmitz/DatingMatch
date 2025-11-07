@@ -3,7 +3,7 @@ Advanced Embedding Manager for Dating Match POC
 Supports multiple embedding models and providers for comparison analysis.
 """
 
-import openai
+from openai import OpenAI
 import voyageai
 import pymongo
 import numpy as np
@@ -78,7 +78,9 @@ class AdvancedEmbeddingManager:
         
         # Initialize API clients
         if openai_key:
-            openai.api_key = openai_key
+            self.openai_client = OpenAI(api_key=openai_key)
+        else:
+            self.openai_client = None
         if voyage_key:
             self.voyage_client = voyageai.Client(api_key=voyage_key)
         else:
@@ -119,14 +121,14 @@ class AdvancedEmbeddingManager:
             
     def _get_openai_embedding(self, text: str, model: str) -> List[float]:
         """Get embedding from OpenAI."""
-        if not self.openai_key:
-            raise ValueError("OpenAI API key not provided")
+        if not self.openai_client:
+            raise ValueError("OpenAI client not initialized")
             
-        response = openai.Embedding.create(
+        response = self.openai_client.embeddings.create(
             input=text,
             model=model
         )
-        return response["data"][0]["embedding"]
+        return response.data[0].embedding
         
     def _get_voyage_embedding(self, text: str, model: str) -> List[float]:
         """Get embedding from VoyageAI."""
