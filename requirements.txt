@@ -2,3 +2,8 @@ openai==0.28.1
 pymongo==4.6.1
 dnspython==2.4.2
 python-dotenv==1.0.1  # Optional, if you decide to use .env again later
+voyageai==0.2.4  # VoyageAI SDK for embeddings and reranking
+numpy==1.24.3  # Required for vector operations
+scikit-learn==1.3.0  # For evaluation metrics
+matplotlib==3.7.2  # For visualizations and analysis
+seaborn==0.12.2  # Enhanced plotting for match analysis
